@@ -14,9 +14,9 @@ if ($userCount > 0) {
 }
 
 // Crear usuario administrador
-$username = 'admin';
-$password = 'admin123'; // Cambiar esta contraseña
-$email = 'admin@example.com'; // Cambiar este email
+$username = 'garushia';
+$password = 'Cliryon@garushia29'; // Cambiar esta contraseña
+$email = 'garushia29@gmail.com'; // Cambiar este email
 
 // Hash de la contraseña
 $password_hash = password_hash($password, PASSWORD_DEFAULT);

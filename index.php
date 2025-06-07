@@ -5,8 +5,8 @@
         <div class="profile-photo">
             <img src="assets/images/profile/jimmy.png" alt="Mi Foto de Perfil" class="dynamic-photo">
         </div>
-        <h1 class="typing-effect">Desarrollador Web Full Stack</h1>
-        <p>Especializado en crear experiencias web únicas y funcionales</p>
+        <h1 class="typing-effect">Desarrollador Web Full-Stack</h1>
+        <p>Apacionado por crear experiencias web únicas y funcionales</p>
         <div class="cta-buttons">
             <a href="projects.php" class="btn btn-primary">Ver Proyectos</a>
             <a href="contact.php" class="btn btn-secondary">Contactar</a>

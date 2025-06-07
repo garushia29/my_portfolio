@@ -2,9 +2,10 @@
 const menuToggle = document.querySelector('.menu-toggle');
 const navMenu = document.querySelector('.nav-menu');
 
-menuToggle.addEventListener('click', () => {
-    navMenu.classList.toggle('active');
-});
+ menuToggle.addEventListener('click', () => {
+        navMenu.classList.toggle('active');
+        menuToggle.classList.toggle('active');
+    });
 
 // Efecto de escritura para el título
 class TypingEffect {
@@ -56,7 +57,8 @@ document.addEventListener('DOMContentLoaded', () => {
         new TypingEffect(element, [
             'Desarrollador Web Full Stack',
             'Diseñador UI/UX',
-            'Creador de Experiencias Web'
+            'Creando Experiencias',
+            'Código Limpio',
         ]);
     }
 });
