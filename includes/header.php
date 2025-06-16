@@ -11,6 +11,8 @@
     <script src='https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.js'></script>
     <link rel="stylesheet" href="<?php echo SITE_URL; ?>/assets/css/style.css">
     <link rel="stylesheet" href="<?php echo SITE_URL; ?>/assets/css/responsive.css">
+    <link rel="stylesheet" href="<?php echo SITE_URL; ?>/assets/css/weather.css">
+   
 </head>
 
 <body>
@@ -29,6 +31,8 @@
                 <li><a href="<?php echo SITE_URL; ?>">Inicio</a></li>
                 <li><a href="<?php echo SITE_URL; ?>/about.php">Sobre Mí</a></li>
                 <li><a href="<?php echo SITE_URL; ?>/projects.php">Proyectos</a></li>
+                <li><a href="<?php echo SITE_URL; ?>/weather.php">Clima</a></li>
+               
                 <li><a href="<?php echo SITE_URL; ?>/contact.php">Contacto</a></li>
             </ul>
             <div class="social-icons">

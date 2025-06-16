@@ -19,4 +19,6 @@ define('SMTP_PORT', 587);
 define('SMTP_USER', 'garushia29@gmail.com'); // Tu correo
 define('SMTP_PASS', ''); // Contraseña de aplicación de Gmail
 define('SMTP_FROM_NAME', 'Jimmy Dev Portfolio');
+
+
 ?>

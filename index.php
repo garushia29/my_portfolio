@@ -1,5 +1,9 @@
 <?php require_once 'includes/header.php'; ?>
 
+<div class="floating-weather-card" id="floating-weather">
+    <div class="weather-preview"></div>
+</div>
+
 <section class="hero-section">
     <div class="hero-content">
         <div class="profile-photo">
@@ -34,5 +38,48 @@
         </div>
     </div>
 </section>
+
+<script>
+const WEATHER_API_KEY = '87af9a9f42364e67b56183310251606'; // Reemplazar con tu API key de WeatherAPI
+
+async function getFloatingWeatherData() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(async position => {
+            try {
+                const response = await fetch(`https://api.weatherapi.com/v1/current.json?key=${WEATHER_API_KEY}&q=${position.coords.latitude},${position.coords.longitude}&lang=es`);
+                const data = await response.json();
+                displayFloatingWeather(data);
+            } catch (error) {
+                console.error('Error fetching weather data:', error);
+                document.querySelector('.weather-preview').innerHTML = 'Error al obtener datos del clima';
+            }
+        }, error => {
+            console.error('Error getting location:', error);
+            document.querySelector('.weather-preview').innerHTML = 'Error al obtener la ubicación';
+        });
+    }
+}
+
+function displayFloatingWeather(data) {
+    const weatherPreview = document.querySelector('.weather-preview');
+    weatherPreview.innerHTML = `
+        <div class="location">${data.location.name}</div>
+        <img src="${data.current.condition.icon}" alt="${data.current.condition.text}">
+        <div class="temperature">${data.current.temp_c}°C</div>
+        <div class="condition">${data.current.condition.text}</div>
+    `;
+}
+
+// Inicializar el clima flotante
+document.addEventListener('DOMContentLoaded', getFloatingWeatherData);
+
+// Actualizar cada 30 minutos
+setInterval(getFloatingWeatherData, 1800000);
+
+// Redirigir a la página del clima al hacer clic en la tarjeta flotante
+document.getElementById('floating-weather').addEventListener('click', () => {
+    window.location.href = 'weather.php';
+});
+</script>
 
 <?php require_once 'includes/footer.php'; ?>

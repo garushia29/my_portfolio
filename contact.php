@@ -102,7 +102,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                             </div>
                             <div class="contact-item">
                                 <i class="fas fa-map-marker-alt"></i>
-                                <span>Cochabamba, Bolivia</span>
+                                <span>Santa Cruz, Bolivia</span>
                             </div>
 
                         </div>
